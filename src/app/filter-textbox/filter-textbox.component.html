@@ -1,0 +1,11 @@
+<div class="search">
+    <input id="search" type="text" (focus)="showDropDown=true;" name="search" [(ngModel)]="searchText" placeholder="Enter you keywords ..">
+    <span class="searchButton">
+        <i class="fa fa-search"></i>
+    </span>
+    <div clickOutsideDropDown (clickOutsideDropDown)="showDropDown=false;" *ngIf="showDropDown" class="search-drop-down">
+        <div class="serch-item" (click)="sugestionClick(item.sentence)" *ngFor="let item of searchSentences|filter:'sentence':searchText">
+            {{item.sentence}}
+        </div>
+    </div>
+</div>
