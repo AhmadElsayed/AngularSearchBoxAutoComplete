@@ -14,15 +14,16 @@ export class FilterTextBox implements OnInit {
 
   }
   sugestionClick(suggestion) {
+    suggestion = suggestion.replace(/<[^>]*>/g, "");
+    // suggestion = suggestion.split("<b>").join("");
+    // suggestion = suggestion.split("</b>").join("");
     this.searchText = suggestion;
     this.showDropDown = false;
   }
   showDropDown: boolean = false;
+  
   toggleDropDown() {
-    console.log('showDropDown value was ' + this.showDropDown);
     this.showDropDown = !this.showDropDown;
-    console.log('showDropDown value became ' + this.showDropDown);
-
   }
   
   @Input()

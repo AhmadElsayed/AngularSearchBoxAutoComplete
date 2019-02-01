@@ -4,8 +4,11 @@
         <i class="fa fa-search"></i>
     </span>
     <div clickOutsideDropDown (clickOutsideDropDown)="showDropDown=false;" *ngIf="showDropDown" class="search-drop-down">
-        <div class="serch-item" (click)="sugestionClick(item.sentence)" *ngFor="let item of searchSentences|filter:'sentence':searchText">
-            {{item.sentence}}
+        <div class="serch-item" (click)="sugestionClick(item.sentence)" *ngFor="let item of searchSentences|filter:searchText"
+            [innerHTML]="item.sentence">
+        </div>
+        <div class="serch-item" *ngIf="(searchSentences|filter:searchText).length === 0">
+            No matches
         </div>
     </div>
 </div>
