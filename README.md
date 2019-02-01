@@ -23,7 +23,7 @@ The sample represents a simple search box with an autocomplete facility with the
 
 * It show a text that there are no matchings in case it did not file
 
-* The dictionary automatically and randomly generated online from https://randomwordgenerator.com/sentence.php
+* The dictionary is automatically and randomly generated online from https://randomwordgenerator.com/sentence.php
 
 * Further plan is to use a Language Processing APIs such as DialogFlow or Luis to identify what did the user want and return the entities and intents
 
