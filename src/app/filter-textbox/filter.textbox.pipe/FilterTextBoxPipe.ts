@@ -23,11 +23,7 @@ export class FilterTextBoxPipe implements PipeTransform {
       // remove all HTML codes entered
       value[i].sentence = value[i].sentence.replace('<b>', '');
       value[i].sentence = value[i].sentence.replace('</b>', '');
-      // if the entered value already exists, return nothing
-      if (value[i].sentence == term) 
-      {
-        return [];
-      }
+      
     };
 
     let newValue: any[] = (value || []).filter((item) => {
@@ -37,7 +33,6 @@ export class FilterTextBoxPipe implements PipeTransform {
         item.sentence = item.sentence.replace('</b>', '');
         result = result && new RegExp(element, 'gi').test(item.sentence)
       });
-      debugger;
       return result;
     });
 
