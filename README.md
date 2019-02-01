@@ -2,7 +2,8 @@
 
 ![Searchbox](/search.gif)
 
-# Description
+# Somethings to say here and there
+
 The sample represents a simple search box with an autocomplete facility with the following features
 
 * Search in dynamic objects array [the dictionary] of structure 
@@ -18,6 +19,14 @@ The sample represents a simple search box with an autocomplete facility with the
 
 * The search keywords are hilighted on run time, check the attached picture
 
-**The idea was inspired by that video**
+* The result shown are the first four matched results, if you want to change you can pass the maxLimit parameter to the pipe
+
+* It show a text that there are no matchings in case it did not file
+
+* The dictionary automatically and randomly generated online from https://randomwordgenerator.com/sentence.php
+
+* Further plan is to use a Language Processing APIs such as DialogFlow or Luis to identify what did the user want and return the entities and intents
+
+**The idea is inspired by that video**
 
 https://www.youtube.com/watch?v=9MN-pi2GMw4
